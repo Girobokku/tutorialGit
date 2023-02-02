@@ -49,37 +49,11 @@ git branch -M main
 git push -u origin main
 ```
 
-# Comandos y pasos a seguir: 
+# Clonar un repositorio existente.
+>Si lo que sucede es que tenemos un repositorio en GitHub y queremos seguir trabajando desde casa o hemos borrado los archivos de nuestro PC siempre podemos clonar lo que ya hemos subido y recuperar nuestro repositorio a local.
 
-# Otros:
-> `git clone [url]` clona un repositorio remoto para tenerlo como local.
+1. Para ello abrimos el terminal y solo tenemos que introducir el comando `git clone https://github.com/Girobokku/tutorialGit.git`
 
-# PRACTICA 3:
-
-1. Se puede usar el comando `git diff` para ver la diferencia entre dos origenes o ramas o con respecto a la última versión guardada de nuestro repositorio.
-2. Se puede usar el comando `git show` para ver aún más detalles sobre commits o ramas.
-3. El comando `git annotate (fichero)` se puede usar para ver quien ha hecho cambios sobre un archivo.
-
-# PRACTICA 4:
-
-1. El comando `git checkout` se puede utilizar para deshacer los cambios realizados, volviendo a la versión que estaba en el repositorio. Para eso se necesita especificarela rchivo que queremos hacer volver a su estado del respositorio con `git checkout -- (archivo)` o `git checkout -- . ` para todos los de la carpeta. 
-2. El comando `git restore stage` para deshacer un git add o hacer simplemente `git restore (archivo)` para deshacer los cambios que hicimos a un archivo.
-3. El comando `git reset` sirve para borrar cambios en diferentes partes, se puede especificar el archivo y la versión a la que resetear. Tiene 3 posibles atributos (principales) siendo estos:
-    > `--soft` El cual reseteará los cambios en el HEAD, es decir, el commit.
-    > `--mixed` que borrará el commit y el git add
-    > `--hard` que borrará elc ommit, el git add y los cambios en nuestro repositorio local.
-
-# PRACTICA 5:
-
-1. El comando `git branch (nombre_branch)` sirve para crear una rama nueva, que es básicamente una especie de puntero desde el último commit hecho.
-    > `git branch -av` indicará una lista de ramas.
-    > `git branch -d (nombre_branch)` eliminará la rama especificada.
-2. El comando `git checkout (nombre_branch)` cambiará la branch actual a la especificada.
-3. El comando `git merge (nombre_branch)` mergeará (unirá, juntará...) la rama especificada con la actual.
-
-* asd
-* asd
-    * asd
-
-1. asdasd
-2. 
+```
+git clone https://github.com/Girobokku/tutorialGit.git
+```
