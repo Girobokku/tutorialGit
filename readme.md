@@ -57,3 +57,10 @@ git push -u origin main
 ```
 git clone https://github.com/Girobokku/tutorialGit.git
 ```
+# Comprobar el estado del repositorio.
+
+> El comando `git status` te mostrará los diferentes estados de los archivos en tu directorio de trabajo y área de ensayo. Qué archivos están modificados y sin seguimiento y cuáles con seguimiento pero no confirmados aún. En su forma normal, también te mostrará algunos consejos básicos sobre cómo mover archivos entre estas etapas.
+
+```
+git status
+```
