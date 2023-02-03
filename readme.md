@@ -33,11 +33,11 @@ git config --global user.name "Quique Vázquez Peñamaría"
 # Crear un nuevo repositorio.
 1. Creamos un directorio con el archivo `hola.txt` y `git.txt` e inicializamos el repositorio introduciendo en el terminal `git init`.
 2. El siguiente paso será añadir los archivos al repositorio que acabamos de crear. Como en el directorio que hemos creado tenemos dos archivos y queremos subir ambos al repositorio, utiliozaremos el comando `git add  . `, que añade todos los archivos del directorio. En caso de haber más archivos y que no nos interese añadir alguno, sería necesario crear el archivo `.gitignore`. Más adelante se explicará su uso.
-3. Ahora es el momento de hacer nuestro primer commit. Para ellos se ejecuta el comando siguiente: `git commit -m "Mi primer commit"`
+3. Ahora es el momento de hacer nuestro primer commit. Para ellos se ejecuta el comando siguiente: `git commit -m "Mi primer commit"`.
 4. Con el comando `git log --oneline --graph --decorate –all` podemos obtener información del commit en el que estamos trabajando, de la rama en la que estamos...
-5. Ahora podemos definir el remote, que viene a ser establecer la URL de nuestro repositorio (https://github.com/Girobokku/tutorialGit.git). Esto es obligatorio para que podamos hacer el git push. Usamos `git remote add origin https://github.com/Girobokku/tutorialGit.git`
-6. Establecido el remote definiremos la rama. Usamos para ello el comando `git branch -M main`
-7. Ahora hacemos el push con `git push -u origin main`
+5. Ahora podemos definir el remote, que viene a ser establecer la URL de nuestro repositorio (https://github.com/Girobokku/tutorialGit.git). Esto es obligatorio para que podamos hacer el git push. Usamos `git remote add origin https://github.com/Girobokku/tutorialGit.git`.
+6. Establecido el remote definiremos la rama. Usamos para ello el comando `git branch -M main`.
+7. Ahora hacemos el push con `git push -u origin main`.
 
 ```
 git init
@@ -52,7 +52,7 @@ git push -u origin main
 # Clonar un repositorio existente.
 >Si lo que sucede es que tenemos un repositorio en GitHub y queremos seguir trabajando desde casa o hemos borrado los archivos de nuestro PC siempre podemos clonar lo que ya hemos subido y recuperar nuestro repositorio a local.
 
-1. Para ello abrimos el terminal y solo tenemos que introducir el comando `git clone https://github.com/Girobokku/tutorialGit.git`
+1. Para ello abrimos el terminal y solo tenemos que introducir el comando `git clone https://github.com/Girobokku/.tutorialGit.git`.
 
 ```
 git clone https://github.com/Girobokku/tutorialGit.git
@@ -67,6 +67,10 @@ git status
 # Historial de confirmaciones.
 
 > El comando `git log` se utiliza para mostrar la historia registrada alcanzable de un proyecto desde la más reciente instantánea confirmada hacia atrás. Por defecto sólo se mostrará la historia de la rama en la que te encuentres, pero pueden ser dadas diferentes e incluso múltiples cabezas o ramas desde la que hacer el recorrido. También se utiliza a menudo para mostrar las diferencias entre dos o más ramas a nivel de commit.
+
+```
+git log
+```
 
 1. En el siguiente ejemplo muestro con `git log` el estado actual del historial antes de hacer un nuevo commit:
 
@@ -97,3 +101,8 @@ Author: Quique Vázquez Peñamaría <vazquez.penamaria.enrique.ald@gmail.com>
 Date:   Fri Feb 3 09:33:18 2023 +0100
 ```
 > NOTA: Para salir del historial de confirmaciones pulsamos la tecla `q`.
+
+# Mostrar diferencias entre versiones.
+
+> El comando `git diff` se utiliza cuando deseas ver las diferencias entre dos árboles. Esto prodría ser la diferencia entre tu entorno de trabajo y tu área de ensayo (`git diff` por sí mismo), entre tu área de ensayo y tu última confirmación o commit (`git diff --staged`), o entre dos confirmaciones (`git diff master branchB`).
+
