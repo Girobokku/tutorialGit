@@ -64,3 +64,22 @@ git clone https://github.com/Girobokku/tutorialGit.git
 ```
 git status
 ```
+# Historial de confirmaciones.
+
+> El comando `git log` se utiliza para mostrar la historia registrada alcanzable de un proyecto desde la más reciente instantánea confirmada hacia atrás. Por defecto sólo se mostrará la historia de la rama en la que te encuentres, pero pueden ser dadas diferentes e incluso múltiples cabezas o ramas desde la que hacer el recorrido. También se utiliza a menudo para mostrar las diferencias entre dos o más ramas a nivel de commit.
+
+1. En el siguiente ejemplo muestro con `git log` el estado actual del historial antes de hacer un nuevo commit:
+
+```
+PS C:\Users\quiqu\Desktop\6.- Control de versiones - Entrega> git log
+commit 382664a55882064bdc5eae17a330a94063fdfde0 (HEAD -> main, origin/main)
+Author: Quique Vázquez Peñamaría <vazquez.penamaria.enrique.ald@gmail.com>
+Date:   Thu Feb 2 13:14:00 2023 +0100
+
+    Añadimos clonar al tutorial
+
+commit dd327c41a84da66bb918ec7154a95b044ee248c4
+Author: Quique Vázquez Peñamaría <vazquez.penamaria.enrique.ald@gmail.com>
+Date:   Thu Feb 2 10:25:23 2023 +0100
+```
+2. Ahora muestro de nuevo con `git log` el estado del historial: 
