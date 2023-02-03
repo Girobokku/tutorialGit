@@ -1,4 +1,4 @@
-# Instalación de Git en Windows
+# Instalación de Git en Windows.
 
 > Descargar el instalador de Git más reciente para Windows.
 
@@ -11,7 +11,7 @@ asistente de configuración de Git. Selecciona las opciones `Next` (Siguiente)
 y `Finish` (Finalizar) para completar la instalación. Las opciones predeterminadas
 son las más lógicas en la mayoría de los casos.
 
-# Configuración básica de usuario en Git
+# Configuración básica de usuario en Git.
 
 > Abrir el Git Bash o símbolo de sitema.
 
@@ -83,3 +83,17 @@ Author: Quique Vázquez Peñamaría <vazquez.penamaria.enrique.ald@gmail.com>
 Date:   Thu Feb 2 10:25:23 2023 +0100
 ```
 2. Ahora muestro de nuevo con `git log` el estado del historial: 
+
+```
+PS C:\Users\quiqu\Desktop\6.- Control de versiones - Entrega> git log
+commit 4eca9937b3921a418163b7caa75f9e25b43527f6 (HEAD -> main, origin/main)
+Author: Quique Vázquez Peñamaría <vazquez.penamaria.enrique.ald@gmail.com>
+Date:   Fri Feb 3 09:36:23 2023 +0100
+
+    Cambio en el historial
+
+commit bdb60faea373c5aba9a0aff07fbd6dc82261f92b
+Author: Quique Vázquez Peñamaría <vazquez.penamaria.enrique.ald@gmail.com>
+Date:   Fri Feb 3 09:33:18 2023 +0100
+```
+> NOTA: Para salir del historial de confirmaciones pulsamos la tecla `q`.
