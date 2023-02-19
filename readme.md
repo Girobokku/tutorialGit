@@ -120,6 +120,12 @@ git branch Nombre
 git checkout Nombre
 ```
 
+> Para consultar las ramas existestes se puede usar el comando `git branch -av`.
+
+```
+git branch -av
+```
+
 # Haciendo merge en ramas.
 
 > Hacer merge en Git crea un commit especial que tiene dos padres diferentes.
