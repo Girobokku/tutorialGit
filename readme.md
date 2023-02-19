@@ -106,3 +106,32 @@ Date:   Fri Feb 3 09:33:18 2023 +0100
 
 > El comando `git diff` se utiliza cuando deseas ver las diferencias entre dos árboles. Esto prodría ser la diferencia entre tu entorno de trabajo y tu área de ensayo (`git diff` por sí mismo), entre tu área de ensayo y tu última confirmación o commit (`git diff --staged`), o entre dos confirmaciones (`git diff master branchB`).
 
+# Haciendo ramas.
+
+> Para crear una rama se utiliza el comando `git branch Nombre`.
+
+```
+git branch Nombre
+```
+
+> Ahora, para poder trabajar en esta rama que hemos creado es necesario utilizar el comando `git checkout Nombre`. Así cambiamos a la rama en la que nos interese trabajar.
+
+```
+git checkout Nombre
+```
+
+# Haciendo merge en ramas.
+
+> Hacer merge en Git crea un commit especial que tiene dos padres diferentes.
+
+```
+git merge Nombre
+```
+
+# Haciendo rebase.
+
+> Similar al merge, el rebase nos da un resultado más "elegante", simplificando visualmente el resultado.
+
+```
+git rebase Nombre
+```
