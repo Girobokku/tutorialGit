@@ -141,3 +141,30 @@ git merge Nombre
 ```
 git rebase Nombre
 ```
+
+# Deshaciendo cambios.
+
+```
+git commit --amend
+```
+`git commit --amend` es un comando de Git que se utiliza para modificar el commit más reciente en la rama actual. Permite realizar cambios en el mensaje del commit, agregar o eliminar archivos del commit, o ambas cosas.
+
+Cuando se ejecuta `git commit --amend`, Git abrirá el editor de texto predeterminado (por ejemplo, vim, nano, etc.) con el mensaje del commit más reciente prellenado. Luego se pueden modificar el mensaje según sea necesario, guardar los cambios y salir del editor.
+
+Si se desea agregar o eliminar archivos del commit, se puede utilizar `git add` o `git rm`, respectivamente, para preparar los cambios que se quieren incluir o excluir. Una vez que se hayan preparado los cambios, se puede ejecutar `git commit --amend` para modificar el commit más reciente con los cambios preparados y/o el nuevo mensaje del commit.
+
+Es importante tener en cuenta que la modificación de un commit con `git commit --amend` crea un nuevo commit con un nuevo hash. Esto significa que si ya se ha enviado el commit original a un repositorio remoto, modificar el commit puede cambiar la historia del commit y potencialmente causar problemas para otros desarrolladores que ya hayan realizado una extracción del commit original. Por lo tanto, generalmente no se recomienda modificar commits que ya se hayan enviado a un repositorio remoto compartido.
+
+# Deshaciendo cambios con git reset.
+
+`git reset` es un comando de Git que se utiliza para deshacer cambios en el historial de commits. Básicamente, permite volver a un commit anterior y eliminar los commits posteriores a él.
+
+Existen tres formas principales de usar `git reset`:
+
+1. `git reset --soft <commit>`: Este comando mueve la rama actual al commit especificado, manteniendo los cambios realizados en los commits posteriores. Es decir, se anula el commit especificado, pero los cambios realizados en él permanecen en el área de preparación (staging area).
+
+2. `git reset --mixed <commit>`: Este comando mueve la rama actual al commit especificado y elimina los cambios realizados en los commits posteriores. Los cambios que se eliminan no se pierden, sino que se devuelven al directorio de trabajo (working directory) para que se puedan preparar y comprometer en nuevos commits.
+
+3. `git reset --hard <commit>`: Este comando mueve la rama actual al commit especificado y elimina los cambios realizados en los commits posteriores, incluyendo los que estaban en el área de preparación. Todos los cambios se pierden irreversiblemente.
+
+Es importante tener en cuenta que `git reset` puede afectar el historial de commits en la rama actual, por lo que debe usarse con precaución, especialmente si se está trabajando en una rama compartida con otros desarrolladores. También es importante tener en cuenta que los commits eliminados por `git reset` no se eliminan completamente del repositorio, sino que quedan en la memoria caché (reflog), por lo que aún es posible recuperarlos si se sabe cómo hacerlo.
